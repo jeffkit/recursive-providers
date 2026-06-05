@@ -1,0 +1,33 @@
+name: Validate providers.json
+
+on:
+  push:
+    paths: ['providers.json']
+  pull_request:
+    paths: ['providers.json']
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON syntax
+        run: python3 -c "import json, sys; json.load(open('providers.json')); print('JSON valid')"
+
+      - name: Check schema_version
+        run: |
+          python3 - <<'EOF'
+          import json, sys
+          data = json.load(open('providers.json'))
+          assert data.get('schema_version') == 1, "schema_version must be 1"
+          assert data.get('updated_at'), "updated_at must be set"
+          assert isinstance(data.get('providers'), list), "providers must be a list"
+          assert len(data['providers']) > 0, "providers must not be empty"
+          for p in data['providers']:
+              assert p.get('id'), f"provider missing id: {p}"
+              assert p.get('provider_type') in ('openai', 'anthropic'), \
+                  f"provider {p['id']}: invalid provider_type {p.get('provider_type')}"
+              assert isinstance(p.get('models'), list), f"provider {p['id']}: models must be a list"
+          print(f"OK: {len(data['providers'])} providers validated")
+          EOF
