@@ -62,25 +62,29 @@ recursive providers update
 | `providers[].mainland_accessible` | bool | Accessible from mainland China without VPN |
 | `providers[].key_env` | string | Environment variable name for the API key |
 
-## Covered providers (16)
+## Covered providers (12)
 
-| ID | Name | Mainland |
-|---|---|---|
-| `anthropic` | Anthropic | ✗ |
-| `openai` | OpenAI | ✗ |
-| `deepseek` | DeepSeek | ✓ |
-| `minimax` | MiniMax | ✓ |
-| `zhipu` | 智谱 AI (GLM) | ✓ |
-| `moonshot` | 月之暗面 (Kimi) | ✓ |
-| `doubao` | 字节跳动 Doubao | ✓ |
-| `dashscope` | 阿里云通义千问 | ✓ |
-| `hunyuan` | 腾讯混元 | ✓ |
-| `stepfun` | 阶跃星辰 | ✓ |
-| `gemini` | Google Gemini | ✗ |
-| `groq` | Groq | ✗ |
-| `mistral` | Mistral AI | ✗ |
-| `xai` | xAI (Grok) | ✗ |
-| `ollama` | Ollama (本地) | ✓ |
+Pricing data for 11 providers is auto-synced weekly from
+[LiteLLM's model_prices_and_context_window.json](https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json).
+Ollama is kept manually (free/local, no pricing).
+
+| ID | Name | Mainland | Sync |
+|---|---|---|---|
+| `anthropic` | Anthropic | ✗ | LiteLLM |
+| `openai` | OpenAI | ✗ | LiteLLM |
+| `deepseek` | DeepSeek | ✓ | LiteLLM |
+| `minimax` | MiniMax | ✓ | LiteLLM |
+| `zhipu` | 智谱 AI (GLM) | ✓ | LiteLLM |
+| `moonshot` | 月之暗面 (Kimi) | ✓ | LiteLLM |
+| `dashscope` | 阿里云通义千问 | ✓ | LiteLLM |
+| `gemini` | Google Gemini | ✗ | LiteLLM |
+| `groq` | Groq | ✗ | LiteLLM |
+| `mistral` | Mistral AI | ✗ | LiteLLM |
+| `xai` | xAI (Grok) | ✗ | LiteLLM |
+| `ollama` | Ollama (本地) | ✓ | Manual |
+
+> Doubao, Hunyuan, and StepFun are not yet covered by LiteLLM and will be
+> added once upstream support lands.
 
 ## Contributing
 
