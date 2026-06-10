@@ -187,11 +187,6 @@ def main() -> None:
 
     if not changes:
         print("No changes detected.", file=sys.stderr)
-        if not args.dry_run:
-            # Still update updated_at so the file reflects the check date
-            PROVIDERS_JSON.write_text(
-                json.dumps(updated, ensure_ascii=False, indent=2) + "\n"
-            )
         return
 
     print(f"{len(changes)} change(s):", file=sys.stderr)
