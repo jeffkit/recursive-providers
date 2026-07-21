@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-07-20T10:51:18Z",
+  "updated_at": "2026-07-21T09:05:35Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -11,6 +11,24 @@
       "anthropic_api_base": null,
       "default_model": "claude-sonnet-4-6",
       "models": [
+        {
+          "name": "claude-sonnet-5",
+          "context_window": 1000000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 10.0,
+            "cache_hit_input_per_million": 0.2
+          }
+        },
+        {
+          "name": "claude-sonnet-4-6",
+          "context_window": 1000000,
+          "pricing": {
+            "input_per_million": 3.0,
+            "output_per_million": 15.0,
+            "cache_hit_input_per_million": 0.3
+          }
+        },
         {
           "name": "claude-opus-4-8",
           "context_window": 1000000,
@@ -30,12 +48,48 @@
           }
         },
         {
-          "name": "claude-sonnet-4-6",
+          "name": "claude-opus-4-6",
           "context_window": 1000000,
+          "pricing": {
+            "input_per_million": 5.0,
+            "output_per_million": 25.0,
+            "cache_hit_input_per_million": 0.5
+          }
+        },
+        {
+          "name": "claude-fable-5",
+          "context_window": 1000000,
+          "pricing": {
+            "input_per_million": 10.0,
+            "output_per_million": 50.0,
+            "cache_hit_input_per_million": 1.0
+          }
+        },
+        {
+          "name": "claude-sonnet-4-5",
+          "context_window": 200000,
           "pricing": {
             "input_per_million": 3.0,
             "output_per_million": 15.0,
             "cache_hit_input_per_million": 0.3
+          }
+        },
+        {
+          "name": "claude-opus-4-5",
+          "context_window": 200000,
+          "pricing": {
+            "input_per_million": 5.0,
+            "output_per_million": 25.0,
+            "cache_hit_input_per_million": 0.5
+          }
+        },
+        {
+          "name": "claude-opus-4-1",
+          "context_window": 200000,
+          "pricing": {
+            "input_per_million": 15.0,
+            "output_per_million": 75.0,
+            "cache_hit_input_per_million": 1.5
           }
         },
         {
@@ -61,6 +115,51 @@
       "default_model": "gpt-5.5",
       "models": [
         {
+          "name": "gpt-5.6-terra",
+          "context_window": 1050000,
+          "pricing": {
+            "input_per_million": 2.5,
+            "output_per_million": 15.0,
+            "cache_hit_input_per_million": 0.25
+          }
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "context_window": 1050000,
+          "pricing": {
+            "input_per_million": 5.0,
+            "output_per_million": 30.0,
+            "cache_hit_input_per_million": 0.5
+          }
+        },
+        {
+          "name": "gpt-5.6-luna",
+          "context_window": 1050000,
+          "pricing": {
+            "input_per_million": 1.0,
+            "output_per_million": 6.0,
+            "cache_hit_input_per_million": 0.1
+          }
+        },
+        {
+          "name": "gpt-5.6",
+          "context_window": 1050000,
+          "pricing": {
+            "input_per_million": 5.0,
+            "output_per_million": 30.0,
+            "cache_hit_input_per_million": 0.5
+          }
+        },
+        {
+          "name": "gpt-5.5-pro",
+          "context_window": 1050000,
+          "pricing": {
+            "input_per_million": 30.0,
+            "output_per_million": 180.0,
+            "cache_hit_input_per_million": 3.0
+          }
+        },
+        {
           "name": "gpt-5.5",
           "context_window": 1050000,
           "pricing": {
@@ -70,12 +169,21 @@
           }
         },
         {
-          "name": "gpt-5.4",
+          "name": "gpt-5.4-pro",
           "context_window": 1050000,
           "pricing": {
-            "input_per_million": 2.5,
-            "output_per_million": 15.0,
-            "cache_hit_input_per_million": 0.25
+            "input_per_million": 30.0,
+            "output_per_million": 180.0,
+            "cache_hit_input_per_million": 3.0
+          }
+        },
+        {
+          "name": "gpt-5.4-nano",
+          "context_window": 1050000,
+          "pricing": {
+            "input_per_million": 0.2,
+            "output_per_million": 1.25,
+            "cache_hit_input_per_million": 0.02
           }
         },
         {
@@ -88,25 +196,167 @@
           }
         },
         {
-          "name": "gpt-4o",
-          "context_window": 128000,
+          "name": "gpt-5.4",
+          "context_window": 1050000,
           "pricing": {
             "input_per_million": 2.5,
-            "output_per_million": 10.0,
-            "cache_hit_input_per_million": 1.25
+            "output_per_million": 15.0,
+            "cache_hit_input_per_million": 0.25
           }
         },
         {
-          "name": "gpt-4o-mini",
-          "context_window": 128000,
+          "name": "gpt-4.1-nano",
+          "context_window": 1047576,
           "pricing": {
-            "input_per_million": 0.15,
-            "output_per_million": 0.6,
-            "cache_hit_input_per_million": 0.075
+            "input_per_million": 0.1,
+            "output_per_million": 0.4,
+            "cache_hit_input_per_million": 0.025
           }
         },
         {
-          "name": "o3",
+          "name": "gpt-4.1-mini",
+          "context_window": 1047576,
+          "pricing": {
+            "input_per_million": 0.4,
+            "output_per_million": 1.6,
+            "cache_hit_input_per_million": 0.1
+          }
+        },
+        {
+          "name": "gpt-4.1",
+          "context_window": 1047576,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 8.0,
+            "cache_hit_input_per_million": 0.5
+          }
+        },
+        {
+          "name": "gpt-5-pro",
+          "context_window": 400000,
+          "pricing": {
+            "input_per_million": 15.0,
+            "output_per_million": 120.0
+          }
+        },
+        {
+          "name": "gpt-5.3-codex",
+          "context_window": 272000,
+          "pricing": {
+            "input_per_million": 1.75,
+            "output_per_million": 14.0,
+            "cache_hit_input_per_million": 0.175
+          }
+        },
+        {
+          "name": "gpt-5.2-pro",
+          "context_window": 272000,
+          "pricing": {
+            "input_per_million": 21.0,
+            "output_per_million": 168.0
+          }
+        },
+        {
+          "name": "gpt-5.2-codex",
+          "context_window": 272000,
+          "pricing": {
+            "input_per_million": 1.75,
+            "output_per_million": 14.0,
+            "cache_hit_input_per_million": 0.175
+          }
+        },
+        {
+          "name": "gpt-5.2",
+          "context_window": 272000,
+          "pricing": {
+            "input_per_million": 1.75,
+            "output_per_million": 14.0,
+            "cache_hit_input_per_million": 0.175
+          }
+        },
+        {
+          "name": "gpt-5.1-codex-mini",
+          "context_window": 272000,
+          "pricing": {
+            "input_per_million": 0.25,
+            "output_per_million": 2.0,
+            "cache_hit_input_per_million": 0.025
+          }
+        },
+        {
+          "name": "gpt-5.1-codex-max",
+          "context_window": 272000,
+          "pricing": {
+            "input_per_million": 1.25,
+            "output_per_million": 10.0,
+            "cache_hit_input_per_million": 0.125
+          }
+        },
+        {
+          "name": "gpt-5.1-codex",
+          "context_window": 272000,
+          "pricing": {
+            "input_per_million": 1.25,
+            "output_per_million": 10.0,
+            "cache_hit_input_per_million": 0.125
+          }
+        },
+        {
+          "name": "gpt-5.1",
+          "context_window": 272000,
+          "pricing": {
+            "input_per_million": 1.25,
+            "output_per_million": 10.0,
+            "cache_hit_input_per_million": 0.125
+          }
+        },
+        {
+          "name": "gpt-5-search-api",
+          "context_window": 272000,
+          "pricing": {
+            "input_per_million": 1.25,
+            "output_per_million": 10.0,
+            "cache_hit_input_per_million": 0.125
+          }
+        },
+        {
+          "name": "gpt-5-nano",
+          "context_window": 272000,
+          "pricing": {
+            "input_per_million": 0.05,
+            "output_per_million": 0.4,
+            "cache_hit_input_per_million": 0.005
+          }
+        },
+        {
+          "name": "gpt-5-mini",
+          "context_window": 272000,
+          "pricing": {
+            "input_per_million": 0.25,
+            "output_per_million": 2.0,
+            "cache_hit_input_per_million": 0.025
+          }
+        },
+        {
+          "name": "gpt-5-codex",
+          "context_window": 272000,
+          "pricing": {
+            "input_per_million": 1.25,
+            "output_per_million": 10.0,
+            "cache_hit_input_per_million": 0.125
+          }
+        },
+        {
+          "name": "gpt-5",
+          "context_window": 272000,
+          "pricing": {
+            "input_per_million": 1.25,
+            "output_per_million": 10.0,
+            "cache_hit_input_per_million": 0.125
+          }
+        },
+        {
+          "name": "o4-mini-deep-research",
           "context_window": 200000,
           "pricing": {
             "input_per_million": 2.0,
@@ -121,6 +371,202 @@
             "input_per_million": 1.1,
             "output_per_million": 4.4,
             "cache_hit_input_per_million": 0.275
+          }
+        },
+        {
+          "name": "o3-pro",
+          "context_window": 200000,
+          "pricing": {
+            "input_per_million": 20.0,
+            "output_per_million": 80.0
+          }
+        },
+        {
+          "name": "o3-mini",
+          "context_window": 200000,
+          "pricing": {
+            "input_per_million": 1.1,
+            "output_per_million": 4.4,
+            "cache_hit_input_per_million": 0.55
+          }
+        },
+        {
+          "name": "o3-deep-research",
+          "context_window": 200000,
+          "pricing": {
+            "input_per_million": 10.0,
+            "output_per_million": 40.0,
+            "cache_hit_input_per_million": 2.5
+          }
+        },
+        {
+          "name": "o3",
+          "context_window": 200000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 8.0,
+            "cache_hit_input_per_million": 0.5
+          }
+        },
+        {
+          "name": "o1-pro",
+          "context_window": 200000,
+          "pricing": {
+            "input_per_million": 150.0,
+            "output_per_million": 600.0
+          }
+        },
+        {
+          "name": "o1",
+          "context_window": 200000,
+          "pricing": {
+            "input_per_million": 15.0,
+            "output_per_million": 60.0,
+            "cache_hit_input_per_million": 7.5
+          }
+        },
+        {
+          "name": "codex-mini-latest",
+          "context_window": 200000,
+          "pricing": {
+            "input_per_million": 1.5,
+            "output_per_million": 6.0,
+            "cache_hit_input_per_million": 0.375
+          }
+        },
+        {
+          "name": "gpt-5.3-chat-latest",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 1.75,
+            "output_per_million": 14.0,
+            "cache_hit_input_per_million": 0.175
+          }
+        },
+        {
+          "name": "gpt-5.2-chat-latest",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 1.75,
+            "output_per_million": 14.0,
+            "cache_hit_input_per_million": 0.175
+          }
+        },
+        {
+          "name": "gpt-5.1-chat-latest",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 1.25,
+            "output_per_million": 10.0,
+            "cache_hit_input_per_million": 0.125
+          }
+        },
+        {
+          "name": "gpt-5-chat-latest",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 1.25,
+            "output_per_million": 10.0,
+            "cache_hit_input_per_million": 0.125
+          }
+        },
+        {
+          "name": "gpt-5-chat",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 1.25,
+            "output_per_million": 10.0,
+            "cache_hit_input_per_million": 0.125
+          }
+        },
+        {
+          "name": "gpt-4o-mini",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 0.15,
+            "output_per_million": 0.6,
+            "cache_hit_input_per_million": 0.075
+          }
+        },
+        {
+          "name": "gpt-4o",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 2.5,
+            "output_per_million": 10.0,
+            "cache_hit_input_per_million": 1.25
+          }
+        },
+        {
+          "name": "gpt-4-turbo",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 10.0,
+            "output_per_million": 30.0
+          }
+        },
+        {
+          "name": "chatgpt-4o-latest",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 5.0,
+            "output_per_million": 15.0
+          }
+        },
+        {
+          "name": "gpt-3.5-turbo-16k",
+          "context_window": 16385,
+          "pricing": {
+            "input_per_million": 3.0,
+            "output_per_million": 4.0
+          }
+        },
+        {
+          "name": "gpt-3.5-turbo-1106",
+          "context_window": 16385,
+          "pricing": {
+            "input_per_million": 1.0,
+            "output_per_million": 2.0
+          }
+        },
+        {
+          "name": "gpt-3.5-turbo-0125",
+          "context_window": 16385,
+          "pricing": {
+            "input_per_million": 0.5,
+            "output_per_million": 1.5
+          }
+        },
+        {
+          "name": "gpt-3.5-turbo",
+          "context_window": 16385,
+          "pricing": {
+            "input_per_million": 0.5,
+            "output_per_million": 1.5
+          }
+        },
+        {
+          "name": "gpt-4-0613",
+          "context_window": 8192,
+          "pricing": {
+            "input_per_million": 30.0,
+            "output_per_million": 60.0
+          }
+        },
+        {
+          "name": "gpt-4-0314",
+          "context_window": 8192,
+          "pricing": {
+            "input_per_million": 30.0,
+            "output_per_million": 60.0
+          }
+        },
+        {
+          "name": "gpt-4",
+          "context_window": 8192,
+          "pricing": {
+            "input_per_million": 30.0,
+            "output_per_million": 60.0
           }
         }
       ],
@@ -137,6 +583,15 @@
       "default_model": "deepseek-v4-flash",
       "models": [
         {
+          "name": "deepseek-v4-pro",
+          "context_window": 1000000,
+          "pricing": {
+            "input_per_million": 0.435,
+            "output_per_million": 0.87,
+            "cache_hit_input_per_million": 0.003625
+          }
+        },
+        {
           "name": "deepseek-v4-flash",
           "context_window": 1000000,
           "pricing": {
@@ -146,12 +601,20 @@
           }
         },
         {
-          "name": "deepseek-v4-pro",
-          "context_window": 1000000,
+          "name": "deepseek-v3.2",
+          "context_window": 163840,
           "pricing": {
-            "input_per_million": 0.435,
-            "output_per_million": 0.87,
-            "cache_hit_input_per_million": 0.003625
+            "input_per_million": 0.28,
+            "output_per_million": 0.4
+          }
+        },
+        {
+          "name": "deepseek-reasoner",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.28,
+            "output_per_million": 0.42,
+            "cache_hit_input_per_million": 0.028
           }
         },
         {
@@ -164,12 +627,28 @@
           }
         },
         {
-          "name": "deepseek-reasoner",
-          "context_window": 131072,
+          "name": "deepseek-coder",
+          "context_window": 128000,
           "pricing": {
-            "input_per_million": 0.28,
-            "output_per_million": 0.42,
-            "cache_hit_input_per_million": 0.028
+            "input_per_million": 0.14,
+            "output_per_million": 0.28
+          }
+        },
+        {
+          "name": "deepseek-v3",
+          "context_window": 65536,
+          "pricing": {
+            "input_per_million": 0.27,
+            "output_per_million": 1.1,
+            "cache_hit_input_per_million": 0.07
+          }
+        },
+        {
+          "name": "deepseek-r1",
+          "context_window": 65536,
+          "pricing": {
+            "input_per_million": 0.55,
+            "output_per_million": 2.19
           }
         }
       ],
@@ -182,7 +661,7 @@
       "name": "MiniMax",
       "provider_type": "openai",
       "api_base": "https://api.minimax.io/v1",
-      "anthropic_api_base": "https://api.minimax.io/anthropic",
+      "anthropic_api_base": null,
       "default_model": "MiniMax-M3",
       "models": [
         {
@@ -195,18 +674,74 @@
           }
         },
         {
-          "name": "MiniMax-M2.7",
+          "name": "MiniMax-M2.5-lightning",
+          "context_window": 1000000,
+          "pricing": {
+            "input_per_million": 0.3,
+            "output_per_million": 2.4,
+            "cache_hit_input_per_million": 0.03
+          }
+        },
+        {
+          "name": "MiniMax-M2.5",
           "context_window": 1000000,
           "pricing": {
             "input_per_million": 0.3,
             "output_per_million": 1.2,
-            "cache_hit_input_per_million": 0.06
+            "cache_hit_input_per_million": 0.03
           }
+        },
+        {
+          "name": "MiniMax-M2.1-lightning",
+          "context_window": 1000000,
+          "pricing": {
+            "input_per_million": 0.3,
+            "output_per_million": 2.4,
+            "cache_hit_input_per_million": 0.03
+          }
+        },
+        {
+          "name": "MiniMax-M2.1",
+          "context_window": 1000000,
+          "pricing": {
+            "input_per_million": 0.3,
+            "output_per_million": 1.2,
+            "cache_hit_input_per_million": 0.03
+          }
+        },
+        {
+          "name": "MiniMax-M2",
+          "context_window": 200000,
+          "pricing": {
+            "input_per_million": 0.3,
+            "output_per_million": 1.2,
+            "cache_hit_input_per_million": 0.03
+          }
+        },
+        {
+          "name": "speech-2.6-turbo",
+          "context_window": 0,
+          "pricing": null
+        },
+        {
+          "name": "speech-2.6-hd",
+          "context_window": 0,
+          "pricing": null
+        },
+        {
+          "name": "speech-02-turbo",
+          "context_window": 0,
+          "pricing": null
+        },
+        {
+          "name": "speech-02-hd",
+          "context_window": 0,
+          "pricing": null
         }
       ],
       "mainland_accessible": true,
       "key_env": "MINIMAX_API_KEY",
-      "key_url": "https://platform.minimax.io/user-center/basic-information/interface-key"
+      "key_url": "https://www.minimax.io/user-center/basic-information"
     },
     {
       "id": "zhipu",
@@ -226,12 +761,30 @@
           }
         },
         {
+          "name": "glm-5-code",
+          "context_window": 200000,
+          "pricing": {
+            "input_per_million": 1.2,
+            "output_per_million": 5.0,
+            "cache_hit_input_per_million": 0.3
+          }
+        },
+        {
           "name": "glm-5",
           "context_window": 200000,
           "pricing": {
             "input_per_million": 1.0,
             "output_per_million": 3.2,
             "cache_hit_input_per_million": 0.2
+          }
+        },
+        {
+          "name": "glm-4.7-flash",
+          "context_window": 200000,
+          "pricing": {
+            "input_per_million": 0,
+            "output_per_million": 0,
+            "cache_hit_input_per_million": 0
           }
         },
         {
@@ -244,12 +797,68 @@
           }
         },
         {
-          "name": "glm-4.7-flash",
+          "name": "glm-4.6",
           "context_window": 200000,
           "pricing": {
+            "input_per_million": 0.6,
+            "output_per_million": 2.2,
+            "cache_hit_input_per_million": 0.11
+          }
+        },
+        {
+          "name": "glm-4.5v",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 0.6,
+            "output_per_million": 1.8
+          }
+        },
+        {
+          "name": "glm-4.5-x",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 2.2,
+            "output_per_million": 8.9
+          }
+        },
+        {
+          "name": "glm-4.5-flash",
+          "context_window": 128000,
+          "pricing": {
             "input_per_million": 0,
-            "output_per_million": 0,
-            "cache_hit_input_per_million": 0
+            "output_per_million": 0
+          }
+        },
+        {
+          "name": "glm-4.5-airx",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 1.1,
+            "output_per_million": 4.5
+          }
+        },
+        {
+          "name": "glm-4.5-air",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 0.2,
+            "output_per_million": 1.1
+          }
+        },
+        {
+          "name": "glm-4.5",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 0.6,
+            "output_per_million": 2.2
+          }
+        },
+        {
+          "name": "glm-4-32b-0414-128k",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 0.1,
+            "output_per_million": 0.1
           }
         }
       ],
@@ -275,11 +884,96 @@
           }
         },
         {
+          "name": "kimi-k2.5",
+          "context_window": 262144,
+          "pricing": {
+            "input_per_million": 0.6,
+            "output_per_million": 3.0,
+            "cache_hit_input_per_million": 0.1
+          }
+        },
+        {
+          "name": "kimi-k2-thinking",
+          "context_window": 262144,
+          "pricing": {
+            "input_per_million": 0.6,
+            "output_per_million": 2.5,
+            "cache_hit_input_per_million": 0.15
+          }
+        },
+        {
+          "name": "moonshot-v1-auto",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 5.0
+          }
+        },
+        {
+          "name": "moonshot-v1-128k-0430",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 5.0
+          }
+        },
+        {
           "name": "moonshot-v1-128k",
           "context_window": 131072,
           "pricing": {
             "input_per_million": 2.0,
             "output_per_million": 5.0
+          }
+        },
+        {
+          "name": "kimi-latest-128k",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 5.0,
+            "cache_hit_input_per_million": 0.15
+          }
+        },
+        {
+          "name": "kimi-latest",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 5.0,
+            "cache_hit_input_per_million": 0.15
+          }
+        },
+        {
+          "name": "moonshot-v1-32k-0430",
+          "context_window": 32768,
+          "pricing": {
+            "input_per_million": 1.0,
+            "output_per_million": 3.0
+          }
+        },
+        {
+          "name": "moonshot-v1-32k",
+          "context_window": 32768,
+          "pricing": {
+            "input_per_million": 1.0,
+            "output_per_million": 3.0
+          }
+        },
+        {
+          "name": "kimi-latest-32k",
+          "context_window": 32768,
+          "pricing": {
+            "input_per_million": 1.0,
+            "output_per_million": 3.0,
+            "cache_hit_input_per_million": 0.15
+          }
+        },
+        {
+          "name": "moonshot-v1-8k-0430",
+          "context_window": 8192,
+          "pricing": {
+            "input_per_million": 0.2,
+            "output_per_million": 2.0
           }
         },
         {
@@ -289,6 +983,15 @@
             "input_per_million": 0.2,
             "output_per_million": 2.0
           }
+        },
+        {
+          "name": "kimi-latest-8k",
+          "context_window": 8192,
+          "pricing": {
+            "input_per_million": 0.2,
+            "output_per_million": 2.0,
+            "cache_hit_input_per_million": 0.15
+          }
         }
       ],
       "mainland_accessible": true,
@@ -297,34 +1000,122 @@
     },
     {
       "id": "dashscope",
-      "name": "阿里云通义千问 (DashScope)",
+      "name": "阿里云通义千问",
       "provider_type": "openai",
       "api_base": "https://dashscope.aliyuncs.com/compatible-mode/v1",
       "anthropic_api_base": null,
       "default_model": "qwen-max",
       "models": [
         {
-          "name": "qwen-max",
-          "context_window": 30720,
+          "name": "qwen-turbo-latest",
+          "context_window": 1000000,
           "pricing": {
-            "input_per_million": 1.6,
-            "output_per_million": 6.4
+            "input_per_million": 0.05,
+            "output_per_million": 0.2
           }
         },
         {
-          "name": "qwen3-235b-a22b",
+          "name": "qwen-coder",
+          "context_window": 1000000,
+          "pricing": {
+            "input_per_million": 0.3,
+            "output_per_million": 1.5
+          }
+        },
+        {
+          "name": "qwen3-coder-plus",
+          "context_window": 997952,
+          "pricing": null
+        },
+        {
+          "name": "qwen3-coder-flash",
+          "context_window": 997952,
+          "pricing": null
+        },
+        {
+          "name": "qwen-plus-latest",
+          "context_window": 997952,
+          "pricing": null
+        },
+        {
+          "name": "qwen-flash",
+          "context_window": 997952,
+          "pricing": null
+        },
+        {
+          "name": "qwen3.5-plus",
+          "context_window": 991808,
+          "pricing": null
+        },
+        {
+          "name": "qwen3-next-80b-a3b-thinking",
           "context_window": 262144,
           "pricing": {
-            "input_per_million": 0.7,
-            "output_per_million": 2.8
+            "input_per_million": 0.15,
+            "output_per_million": 1.2
           }
         },
         {
-          "name": "qwen3-32b",
+          "name": "qwen3-next-80b-a3b-instruct",
+          "context_window": 262144,
+          "pricing": {
+            "input_per_million": 0.15,
+            "output_per_million": 1.2
+          }
+        },
+        {
+          "name": "qwen3-vl-plus",
+          "context_window": 260096,
+          "pricing": null
+        },
+        {
+          "name": "qwen3-max",
+          "context_window": 258048,
+          "pricing": null
+        },
+        {
+          "name": "qwen3-vl-32b-thinking",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.16,
+            "output_per_million": 2.87
+          }
+        },
+        {
+          "name": "qwen3-vl-32b-instruct",
           "context_window": 131072,
           "pricing": {
             "input_per_million": 0.16,
             "output_per_million": 0.64
+          }
+        },
+        {
+          "name": "qwen3-vl-235b-a22b-thinking",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.4,
+            "output_per_million": 4.0
+          }
+        },
+        {
+          "name": "qwen3-vl-235b-a22b-instruct",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.4,
+            "output_per_million": 1.6
+          }
+        },
+        {
+          "name": "qwen3-30b-a3b",
+          "context_window": 129024,
+          "pricing": null
+        },
+        {
+          "name": "qwen-turbo",
+          "context_window": 129024,
+          "pricing": {
+            "input_per_million": 0.05,
+            "output_per_million": 0.2
           }
         },
         {
@@ -334,11 +1125,27 @@
             "input_per_million": 0.4,
             "output_per_million": 1.2
           }
+        },
+        {
+          "name": "qwq-plus",
+          "context_window": 98304,
+          "pricing": {
+            "input_per_million": 0.8,
+            "output_per_million": 2.4
+          }
+        },
+        {
+          "name": "qwen-max",
+          "context_window": 30720,
+          "pricing": {
+            "input_per_million": 1.6,
+            "output_per_million": 6.4
+          }
         }
       ],
       "mainland_accessible": true,
       "key_env": "DASHSCOPE_API_KEY",
-      "key_url": "https://bailian.console.aliyun.com/?apiKey=1"
+      "key_url": "https://dashscope.console.aliyun.com/apiKey"
     },
     {
       "id": "gemini",
@@ -349,21 +1156,39 @@
       "default_model": "gemini-2.5-pro",
       "models": [
         {
+          "name": "gemini-pro-latest",
+          "context_window": 1048576,
+          "pricing": {
+            "input_per_million": 1.25,
+            "output_per_million": 10.0,
+            "cache_hit_input_per_million": 0.125
+          }
+        },
+        {
+          "name": "gemini-flash-lite-latest",
+          "context_window": 1048576,
+          "pricing": {
+            "input_per_million": 0.1,
+            "output_per_million": 0.4,
+            "cache_hit_input_per_million": 0.025
+          }
+        },
+        {
+          "name": "gemini-flash-latest",
+          "context_window": 1048576,
+          "pricing": {
+            "input_per_million": 0.3,
+            "output_per_million": 2.5,
+            "cache_hit_input_per_million": 0.075
+          }
+        },
+        {
           "name": "gemini-3.5-flash",
           "context_window": 1048576,
           "pricing": {
             "input_per_million": 1.5,
             "output_per_million": 9.0,
             "cache_hit_input_per_million": 0.15
-          }
-        },
-        {
-          "name": "gemini-3.1-pro-preview",
-          "context_window": 1048576,
-          "pricing": {
-            "input_per_million": 2.0,
-            "output_per_million": 12.0,
-            "cache_hit_input_per_million": 0.2
           }
         },
         {
@@ -385,6 +1210,15 @@
           }
         },
         {
+          "name": "gemini-2.5-flash-lite",
+          "context_window": 1048576,
+          "pricing": {
+            "input_per_million": 0.1,
+            "output_per_million": 0.4,
+            "cache_hit_input_per_million": 0.01
+          }
+        },
+        {
           "name": "gemini-2.5-flash",
           "context_window": 1048576,
           "pricing": {
@@ -394,18 +1228,92 @@
           }
         },
         {
-          "name": "gemini-2.5-flash-lite",
+          "name": "gemini-2.0-flash-lite-001",
+          "context_window": 1048576,
+          "pricing": {
+            "input_per_million": 0.075,
+            "output_per_million": 0.3,
+            "cache_hit_input_per_million": 0.01875
+          }
+        },
+        {
+          "name": "gemini-2.0-flash-lite",
+          "context_window": 1048576,
+          "pricing": {
+            "input_per_million": 0.075,
+            "output_per_million": 0.3,
+            "cache_hit_input_per_million": 0.01875
+          }
+        },
+        {
+          "name": "gemini-2.0-flash-001",
           "context_window": 1048576,
           "pricing": {
             "input_per_million": 0.1,
             "output_per_million": 0.4,
-            "cache_hit_input_per_million": 0.01
+            "cache_hit_input_per_million": 0.025
           }
+        },
+        {
+          "name": "gemini-2.0-flash",
+          "context_window": 1048576,
+          "pricing": {
+            "input_per_million": 0.1,
+            "output_per_million": 0.4,
+            "cache_hit_input_per_million": 0.025
+          }
+        },
+        {
+          "name": "gemma-3-27b-it",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0,
+            "output_per_million": 0
+          }
+        },
+        {
+          "name": "learnlm-1.5-pro-experimental",
+          "context_window": 32767,
+          "pricing": {
+            "input_per_million": 0,
+            "output_per_million": 0
+          }
+        },
+        {
+          "name": "gemini-gemma-2-9b-it",
+          "context_window": 8192,
+          "pricing": {
+            "input_per_million": 0.35,
+            "output_per_million": 1.05
+          }
+        },
+        {
+          "name": "gemini-gemma-2-27b-it",
+          "context_window": 8192,
+          "pricing": {
+            "input_per_million": 0.35,
+            "output_per_million": 1.05
+          }
+        },
+        {
+          "name": "veo-3.1-generate-001",
+          "context_window": 1024,
+          "pricing": null
+        },
+        {
+          "name": "veo-3.1-fast-generate-001",
+          "context_window": 1024,
+          "pricing": null
+        },
+        {
+          "name": "veo-2.0-generate-001",
+          "context_window": 1024,
+          "pricing": null
         }
       ],
       "mainland_accessible": false,
       "key_env": "GEMINI_API_KEY",
-      "key_url": "https://aistudio.google.com/app/apikey"
+      "key_url": "https://aistudio.google.com/apikey"
     },
     {
       "id": "groq",
@@ -415,6 +1323,57 @@
       "anthropic_api_base": null,
       "default_model": "llama-3.3-70b-versatile",
       "models": [
+        {
+          "name": "openai/gpt-oss-safeguard-20b",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.075,
+            "output_per_million": 0.3,
+            "cache_hit_input_per_million": 0.037
+          }
+        },
+        {
+          "name": "openai/gpt-oss-20b",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.075,
+            "output_per_million": 0.3,
+            "cache_hit_input_per_million": 0.0375
+          }
+        },
+        {
+          "name": "openai/gpt-oss-120b",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.15,
+            "output_per_million": 0.6,
+            "cache_hit_input_per_million": 0.075
+          }
+        },
+        {
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.11,
+            "output_per_million": 0.34
+          }
+        },
+        {
+          "name": "meta-llama/llama-4-maverick-17b-128e-instruct",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.2,
+            "output_per_million": 0.6
+          }
+        },
+        {
+          "name": "qwen/qwen3-32b",
+          "context_window": 131000,
+          "pricing": {
+            "input_per_million": 0.29,
+            "output_per_million": 0.59
+          }
+        },
         {
           "name": "llama-3.3-70b-versatile",
           "context_window": 128000,
@@ -432,19 +1391,19 @@
           }
         },
         {
-          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "context_window": 131072,
+          "name": "meta-llama/llama-guard-4-12b",
+          "context_window": 8192,
           "pricing": {
-            "input_per_million": 0.11,
-            "output_per_million": 0.34
+            "input_per_million": 0.2,
+            "output_per_million": 0.2
           }
         },
         {
-          "name": "moonshotai/kimi-k2-instruct",
-          "context_window": 128000,
+          "name": "gemma-7b-it",
+          "context_window": 8192,
           "pricing": {
-            "input_per_million": 1.0,
-            "output_per_million": 3.0
+            "input_per_million": 0.05,
+            "output_per_million": 0.08
           }
         }
       ],
@@ -461,11 +1420,147 @@
       "default_model": "mistral-large-latest",
       "models": [
         {
+          "name": "mistral-medium-latest",
+          "context_window": 262144,
+          "pricing": {
+            "input_per_million": 1.5,
+            "output_per_million": 7.5
+          }
+        },
+        {
+          "name": "mistral-medium-3-5",
+          "context_window": 262144,
+          "pricing": {
+            "input_per_million": 1.5,
+            "output_per_million": 7.5
+          }
+        },
+        {
+          "name": "mistral-medium-2604",
+          "context_window": 262144,
+          "pricing": {
+            "input_per_million": 1.5,
+            "output_per_million": 7.5
+          }
+        },
+        {
           "name": "mistral-large-latest",
           "context_window": 262144,
           "pricing": {
             "input_per_million": 0.5,
             "output_per_million": 1.5
+          }
+        },
+        {
+          "name": "mistral-large-3",
+          "context_window": 262144,
+          "pricing": {
+            "input_per_million": 0.5,
+            "output_per_million": 1.5
+          }
+        },
+        {
+          "name": "mistral-large-2512",
+          "context_window": 262144,
+          "pricing": {
+            "input_per_million": 0.5,
+            "output_per_million": 1.5
+          }
+        },
+        {
+          "name": "ministral-8b-latest",
+          "context_window": 262144,
+          "pricing": {
+            "input_per_million": 0.15,
+            "output_per_million": 0.15
+          }
+        },
+        {
+          "name": "ministral-8b-2512",
+          "context_window": 262144,
+          "pricing": {
+            "input_per_million": 0.15,
+            "output_per_million": 0.15
+          }
+        },
+        {
+          "name": "ministral-3-8b-2512",
+          "context_window": 262144,
+          "pricing": {
+            "input_per_million": 0.15,
+            "output_per_million": 0.15
+          }
+        },
+        {
+          "name": "ministral-3-14b-2512",
+          "context_window": 262144,
+          "pricing": {
+            "input_per_million": 0.2,
+            "output_per_million": 0.2
+          }
+        },
+        {
+          "name": "open-codestral-mamba",
+          "context_window": 256000,
+          "pricing": {
+            "input_per_million": 0.25,
+            "output_per_million": 0.25
+          }
+        },
+        {
+          "name": "labs-devstral-small-2512",
+          "context_window": 256000,
+          "pricing": {
+            "input_per_million": 0.1,
+            "output_per_million": 0.3
+          }
+        },
+        {
+          "name": "devstral-small-latest",
+          "context_window": 256000,
+          "pricing": {
+            "input_per_million": 0.1,
+            "output_per_million": 0.3
+          }
+        },
+        {
+          "name": "devstral-medium-latest",
+          "context_window": 256000,
+          "pricing": {
+            "input_per_million": 0.4,
+            "output_per_million": 2.0
+          }
+        },
+        {
+          "name": "devstral-latest",
+          "context_window": 256000,
+          "pricing": {
+            "input_per_million": 0.4,
+            "output_per_million": 2.0
+          }
+        },
+        {
+          "name": "devstral-2512",
+          "context_window": 256000,
+          "pricing": {
+            "input_per_million": 0.4,
+            "output_per_million": 2.0
+          }
+        },
+        {
+          "name": "codestral-mamba-latest",
+          "context_window": 256000,
+          "pricing": {
+            "input_per_million": 0.25,
+            "output_per_million": 0.25
+          }
+        },
+        {
+          "name": "codestral-2508",
+          "context_window": 256000,
+          "pricing": {
+            "input_per_million": 0.3,
+            "output_per_million": 0.9
           }
         },
         {
@@ -477,7 +1572,231 @@
           }
         },
         {
+          "name": "mistral-small-3-2-2506",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.06,
+            "output_per_million": 0.18
+          }
+        },
+        {
+          "name": "mistral-medium-3-1-2508",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.4,
+            "output_per_million": 2.0
+          }
+        },
+        {
+          "name": "mistral-medium-2508",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.4,
+            "output_per_million": 2.0
+          }
+        },
+        {
+          "name": "mistral-medium-2505",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.4,
+            "output_per_million": 2.0
+          }
+        },
+        {
+          "name": "ministral-3-3b-2512",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.1,
+            "output_per_million": 0.1
+          }
+        },
+        {
+          "name": "open-mistral-nemo-2407",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 0.3,
+            "output_per_million": 0.3
+          }
+        },
+        {
+          "name": "open-mistral-nemo",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 0.3,
+            "output_per_million": 0.3
+          }
+        },
+        {
+          "name": "mistral-large-2411",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 6.0
+          }
+        },
+        {
+          "name": "mistral-large-2407",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 3.0,
+            "output_per_million": 9.0
+          }
+        },
+        {
+          "name": "devstral-small-2507",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 0.1,
+            "output_per_million": 0.3
+          }
+        },
+        {
+          "name": "devstral-small-2505",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 0.1,
+            "output_per_million": 0.3
+          }
+        },
+        {
+          "name": "devstral-medium-2507",
+          "context_window": 128000,
+          "pricing": {
+            "input_per_million": 0.4,
+            "output_per_million": 2.0
+          }
+        },
+        {
+          "name": "open-mixtral-8x22b",
+          "context_window": 65336,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 6.0
+          }
+        },
+        {
+          "name": "magistral-small-latest",
+          "context_window": 40000,
+          "pricing": {
+            "input_per_million": 0.5,
+            "output_per_million": 1.5
+          }
+        },
+        {
+          "name": "magistral-small-2506",
+          "context_window": 40000,
+          "pricing": {
+            "input_per_million": 0.5,
+            "output_per_million": 1.5
+          }
+        },
+        {
+          "name": "magistral-small-1-2-2509",
+          "context_window": 40000,
+          "pricing": {
+            "input_per_million": 0.5,
+            "output_per_million": 1.5
+          }
+        },
+        {
+          "name": "magistral-medium-latest",
+          "context_window": 40000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 5.0
+          }
+        },
+        {
+          "name": "magistral-medium-2509",
+          "context_window": 40000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 5.0
+          }
+        },
+        {
+          "name": "magistral-medium-2506",
+          "context_window": 40000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 5.0
+          }
+        },
+        {
+          "name": "magistral-medium-1-2-2509",
+          "context_window": 40000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 5.0
+          }
+        },
+        {
+          "name": "open-mixtral-8x7b",
+          "context_window": 32000,
+          "pricing": {
+            "input_per_million": 0.7,
+            "output_per_million": 0.7
+          }
+        },
+        {
+          "name": "open-mistral-7b",
+          "context_window": 32000,
+          "pricing": {
+            "input_per_million": 0.25,
+            "output_per_million": 0.25
+          }
+        },
+        {
+          "name": "mistral-tiny",
+          "context_window": 32000,
+          "pricing": {
+            "input_per_million": 0.25,
+            "output_per_million": 0.25
+          }
+        },
+        {
+          "name": "mistral-small",
+          "context_window": 32000,
+          "pricing": {
+            "input_per_million": 0.1,
+            "output_per_million": 0.3
+          }
+        },
+        {
+          "name": "mistral-medium-2312",
+          "context_window": 32000,
+          "pricing": {
+            "input_per_million": 2.7,
+            "output_per_million": 8.1
+          }
+        },
+        {
+          "name": "mistral-medium",
+          "context_window": 32000,
+          "pricing": {
+            "input_per_million": 2.7,
+            "output_per_million": 8.1
+          }
+        },
+        {
+          "name": "mistral-large-2402",
+          "context_window": 32000,
+          "pricing": {
+            "input_per_million": 4.0,
+            "output_per_million": 12.0
+          }
+        },
+        {
           "name": "codestral-latest",
+          "context_window": 32000,
+          "pricing": {
+            "input_per_million": 1.0,
+            "output_per_million": 3.0
+          }
+        },
+        {
+          "name": "codestral-2405",
           "context_window": 32000,
           "pricing": {
             "input_per_million": 1.0,
@@ -487,7 +1806,7 @@
       ],
       "mainland_accessible": false,
       "key_env": "MISTRAL_API_KEY",
-      "key_url": "https://console.mistral.ai/api-keys"
+      "key_url": "https://console.mistral.ai/api-keys/"
     },
     {
       "id": "xai",
@@ -498,6 +1817,114 @@
       "default_model": "grok-4.3",
       "models": [
         {
+          "name": "grok-4.20-multi-agent-beta-0309",
+          "context_window": 2000000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 6.0,
+            "cache_hit_input_per_million": 0.2
+          }
+        },
+        {
+          "name": "grok-4.20-beta-0309-reasoning",
+          "context_window": 2000000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 6.0,
+            "cache_hit_input_per_million": 0.2
+          }
+        },
+        {
+          "name": "grok-4.20-beta-0309-non-reasoning",
+          "context_window": 2000000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 6.0,
+            "cache_hit_input_per_million": 0.2
+          }
+        },
+        {
+          "name": "grok-4.20-0309-reasoning",
+          "context_window": 2000000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 6.0,
+            "cache_hit_input_per_million": 0.2
+          }
+        },
+        {
+          "name": "grok-4-fast-reasoning",
+          "context_window": 2000000,
+          "pricing": {
+            "input_per_million": 0.2,
+            "output_per_million": 0.5,
+            "cache_hit_input_per_million": 0.05
+          }
+        },
+        {
+          "name": "grok-4-fast-non-reasoning",
+          "context_window": 2000000,
+          "pricing": {
+            "input_per_million": 0.2,
+            "output_per_million": 0.5,
+            "cache_hit_input_per_million": 0.05
+          }
+        },
+        {
+          "name": "grok-4-1-fast-reasoning-latest",
+          "context_window": 2000000,
+          "pricing": {
+            "input_per_million": 0.2,
+            "output_per_million": 0.5,
+            "cache_hit_input_per_million": 0.05
+          }
+        },
+        {
+          "name": "grok-4-1-fast-reasoning",
+          "context_window": 2000000,
+          "pricing": {
+            "input_per_million": 0.2,
+            "output_per_million": 0.5,
+            "cache_hit_input_per_million": 0.05
+          }
+        },
+        {
+          "name": "grok-4-1-fast-non-reasoning-latest",
+          "context_window": 2000000,
+          "pricing": {
+            "input_per_million": 0.2,
+            "output_per_million": 0.5,
+            "cache_hit_input_per_million": 0.05
+          }
+        },
+        {
+          "name": "grok-4-1-fast-non-reasoning",
+          "context_window": 2000000,
+          "pricing": {
+            "input_per_million": 0.2,
+            "output_per_million": 0.5,
+            "cache_hit_input_per_million": 0.05
+          }
+        },
+        {
+          "name": "grok-4-1-fast",
+          "context_window": 2000000,
+          "pricing": {
+            "input_per_million": 0.2,
+            "output_per_million": 0.5,
+            "cache_hit_input_per_million": 0.05
+          }
+        },
+        {
+          "name": "grok-4.3-latest",
+          "context_window": 1000000,
+          "pricing": {
+            "input_per_million": 1.25,
+            "output_per_million": 2.5,
+            "cache_hit_input_per_million": 0.2
+          }
+        },
+        {
           "name": "grok-4.3",
           "context_window": 1000000,
           "pricing": {
@@ -507,11 +1934,235 @@
           }
         },
         {
-          "name": "grok-build-0.1",
+          "name": "grok-4.5-latest",
+          "context_window": 500000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 6.0,
+            "cache_hit_input_per_million": 0.5
+          }
+        },
+        {
+          "name": "grok-4.5",
+          "context_window": 500000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 6.0,
+            "cache_hit_input_per_million": 0.5
+          }
+        },
+        {
+          "name": "grok-code-fast-1-0825",
           "context_window": 256000,
           "pricing": {
-            "input_per_million": 1.0,
-            "output_per_million": 2.0
+            "input_per_million": 0.2,
+            "output_per_million": 1.5,
+            "cache_hit_input_per_million": 0.02
+          }
+        },
+        {
+          "name": "grok-code-fast-1",
+          "context_window": 256000,
+          "pricing": {
+            "input_per_million": 0.2,
+            "output_per_million": 1.5,
+            "cache_hit_input_per_million": 0.02
+          }
+        },
+        {
+          "name": "grok-code-fast",
+          "context_window": 256000,
+          "pricing": {
+            "input_per_million": 0.2,
+            "output_per_million": 1.5,
+            "cache_hit_input_per_million": 0.02
+          }
+        },
+        {
+          "name": "grok-4-latest",
+          "context_window": 256000,
+          "pricing": {
+            "input_per_million": 3.0,
+            "output_per_million": 15.0
+          }
+        },
+        {
+          "name": "grok-4-0709",
+          "context_window": 256000,
+          "pricing": {
+            "input_per_million": 3.0,
+            "output_per_million": 15.0
+          }
+        },
+        {
+          "name": "grok-4",
+          "context_window": 256000,
+          "pricing": {
+            "input_per_million": 3.0,
+            "output_per_million": 15.0
+          }
+        },
+        {
+          "name": "grok-beta",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 5.0,
+            "output_per_million": 15.0
+          }
+        },
+        {
+          "name": "grok-3-mini-latest",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.3,
+            "output_per_million": 0.5,
+            "cache_hit_input_per_million": 0.075
+          }
+        },
+        {
+          "name": "grok-3-mini-fast-latest",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.6,
+            "output_per_million": 4.0,
+            "cache_hit_input_per_million": 0.15
+          }
+        },
+        {
+          "name": "grok-3-mini-fast-beta",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.6,
+            "output_per_million": 4.0,
+            "cache_hit_input_per_million": 0.15
+          }
+        },
+        {
+          "name": "grok-3-mini-fast",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.6,
+            "output_per_million": 4.0,
+            "cache_hit_input_per_million": 0.15
+          }
+        },
+        {
+          "name": "grok-3-mini-beta",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.3,
+            "output_per_million": 0.5,
+            "cache_hit_input_per_million": 0.075
+          }
+        },
+        {
+          "name": "grok-3-mini",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.3,
+            "output_per_million": 0.5,
+            "cache_hit_input_per_million": 0.075
+          }
+        },
+        {
+          "name": "grok-3-latest",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 3.0,
+            "output_per_million": 15.0,
+            "cache_hit_input_per_million": 0.75
+          }
+        },
+        {
+          "name": "grok-3-fast-latest",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 5.0,
+            "output_per_million": 25.0,
+            "cache_hit_input_per_million": 1.25
+          }
+        },
+        {
+          "name": "grok-3-fast-beta",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 5.0,
+            "output_per_million": 25.0,
+            "cache_hit_input_per_million": 1.25
+          }
+        },
+        {
+          "name": "grok-3-beta",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 3.0,
+            "output_per_million": 15.0,
+            "cache_hit_input_per_million": 0.75
+          }
+        },
+        {
+          "name": "grok-3",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 3.0,
+            "output_per_million": 15.0,
+            "cache_hit_input_per_million": 0.75
+          }
+        },
+        {
+          "name": "grok-2-latest",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 10.0
+          }
+        },
+        {
+          "name": "grok-2-1212",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 10.0
+          }
+        },
+        {
+          "name": "grok-2",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 10.0
+          }
+        },
+        {
+          "name": "grok-2-vision-latest",
+          "context_window": 32768,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 10.0
+          }
+        },
+        {
+          "name": "grok-2-vision-1212",
+          "context_window": 32768,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 10.0
+          }
+        },
+        {
+          "name": "grok-2-vision",
+          "context_window": 32768,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 10.0
+          }
+        },
+        {
+          "name": "grok-vision-beta",
+          "context_window": 8192,
+          "pricing": {
+            "input_per_million": 5.0,
+            "output_per_million": 15.0
           }
         }
       ],

@@ -64,8 +64,13 @@ recursive providers update
 
 ## Covered providers (12)
 
-Pricing data for 11 providers is auto-synced weekly from
-[LiteLLM's model_prices_and_context_window.json](https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json).
+Pricing and the full model list for 11 providers are auto-discovered daily
+from [LiteLLM's model_prices_and_context_window.json](https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json).
+The sync script (`scripts/sync_providers.py`) matches each vendor by its
+`litellm_provider` tag and pulls **every** text model with published pricing
+— so newly released models appear automatically on the next run, no code
+change needed. Non-text modalities (image/audio/video/OCR), fine-tunes, and
+date-stamped snapshot builds are filtered out to keep the list readable.
 Ollama is kept manually (free/local, no pricing).
 
 | ID | Name | Mainland | Sync |
