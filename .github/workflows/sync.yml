@@ -39,5 +39,9 @@ jobs:
           body: |
             Auto-synced from [LiteLLM model_prices_and_context_window.json](https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json).
 
-            Changes detected by `scripts/sync_providers.py`. Please review the diff before merging.
+            Changes detected by `scripts/sync_providers.py`. This PR auto-merges via `enable-pull-request-automerge` so the catalog stays current without manual review.
           labels: automated
+          # Auto-merge so daily price updates land on `main` without a
+          # human clicking merge (the previous setup opened a PR that was
+          # never merged, so `main`'s catalog silently went stale).
+          enable-pull-request-automerge: true
