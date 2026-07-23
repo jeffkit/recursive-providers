@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-07-21T09:05:35Z",
+  "updated_at": "2026-07-23T10:21:48Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -1180,6 +1180,24 @@
             "input_per_million": 0.3,
             "output_per_million": 2.5,
             "cache_hit_input_per_million": 0.075
+          }
+        },
+        {
+          "name": "gemini-3.6-flash",
+          "context_window": 1048576,
+          "pricing": {
+            "input_per_million": 1.5,
+            "output_per_million": 7.5,
+            "cache_hit_input_per_million": 0.15
+          }
+        },
+        {
+          "name": "gemini-3.5-flash-lite",
+          "context_window": 1048576,
+          "pricing": {
+            "input_per_million": 0.3,
+            "output_per_million": 2.5,
+            "cache_hit_input_per_million": 0.03
           }
         },
         {
