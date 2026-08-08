@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-07-21T09:05:35Z",
+  "updated_at": "2026-08-08T08:39:32Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -27,6 +27,15 @@
             "input_per_million": 3.0,
             "output_per_million": 15.0,
             "cache_hit_input_per_million": 0.3
+          }
+        },
+        {
+          "name": "claude-opus-5",
+          "context_window": 1000000,
+          "pricing": {
+            "input_per_million": 5.0,
+            "output_per_million": 25.0,
+            "cache_hit_input_per_million": 0.5
           }
         },
         {
@@ -118,9 +127,9 @@
           "name": "gpt-5.6-terra",
           "context_window": 1050000,
           "pricing": {
-            "input_per_million": 2.5,
-            "output_per_million": 15.0,
-            "cache_hit_input_per_million": 0.25
+            "input_per_million": 2.0,
+            "output_per_million": 12.0,
+            "cache_hit_input_per_million": 0.2
           }
         },
         {
@@ -136,9 +145,9 @@
           "name": "gpt-5.6-luna",
           "context_window": 1050000,
           "pricing": {
-            "input_per_million": 1.0,
-            "output_per_million": 6.0,
-            "cache_hit_input_per_million": 0.1
+            "input_per_million": 0.2,
+            "output_per_million": 1.2,
+            "cache_hit_input_per_million": 0.02
           }
         },
         {
@@ -175,24 +184,6 @@
             "input_per_million": 30.0,
             "output_per_million": 180.0,
             "cache_hit_input_per_million": 3.0
-          }
-        },
-        {
-          "name": "gpt-5.4-nano",
-          "context_window": 1050000,
-          "pricing": {
-            "input_per_million": 0.2,
-            "output_per_million": 1.25,
-            "cache_hit_input_per_million": 0.02
-          }
-        },
-        {
-          "name": "gpt-5.4-mini",
-          "context_window": 1050000,
-          "pricing": {
-            "input_per_million": 0.75,
-            "output_per_million": 4.5,
-            "cache_hit_input_per_million": 0.075
           }
         },
         {
@@ -237,6 +228,24 @@
           "pricing": {
             "input_per_million": 15.0,
             "output_per_million": 120.0
+          }
+        },
+        {
+          "name": "gpt-5.4-nano",
+          "context_window": 272000,
+          "pricing": {
+            "input_per_million": 0.2,
+            "output_per_million": 1.25,
+            "cache_hit_input_per_million": 0.02
+          }
+        },
+        {
+          "name": "gpt-5.4-mini",
+          "context_window": 272000,
+          "pricing": {
+            "input_per_million": 0.75,
+            "output_per_million": 4.5,
+            "cache_hit_input_per_million": 0.075
           }
         },
         {
@@ -1043,6 +1052,20 @@
           "pricing": null
         },
         {
+          "name": "qwen3.7-plus",
+          "context_window": 991808,
+          "pricing": null
+        },
+        {
+          "name": "qwen3.7-max",
+          "context_window": 991808,
+          "pricing": {
+            "input_per_million": 2.5,
+            "output_per_million": 7.5,
+            "cache_hit_input_per_million": 0.5
+          }
+        },
+        {
           "name": "qwen3.5-plus",
           "context_window": 991808,
           "pricing": null
@@ -1180,6 +1203,24 @@
             "input_per_million": 0.3,
             "output_per_million": 2.5,
             "cache_hit_input_per_million": 0.075
+          }
+        },
+        {
+          "name": "gemini-3.6-flash",
+          "context_window": 1048576,
+          "pricing": {
+            "input_per_million": 1.5,
+            "output_per_million": 7.5,
+            "cache_hit_input_per_million": 0.15
+          }
+        },
+        {
+          "name": "gemini-3.5-flash-lite",
+          "context_window": 1048576,
+          "pricing": {
+            "input_per_million": 0.3,
+            "output_per_million": 2.5,
+            "cache_hit_input_per_million": 0.03
           }
         },
         {
