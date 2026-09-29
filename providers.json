@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-28T06:26:48Z",
+  "updated_at": "2026-09-29T14:38:28Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -11,6 +11,15 @@
       "anthropic_api_base": null,
       "default_model": "claude-sonnet-4-6",
       "models": [
+        {
+          "name": "claude-sonnet-5-5",
+          "context_window": 1000000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 10.0,
+            "cache_hit_input_per_million": 0.2
+          }
+        },
         {
           "name": "claude-sonnet-5",
           "context_window": 1000000,
