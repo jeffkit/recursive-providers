@@ -6,18 +6,28 @@ on:
     - cron: '0 8 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: sync-providers
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-
     steps:
       - uses: actions/checkout@v4
 
       - name: Run sync script
         run: python3 scripts/sync_providers.py
+
+      # Gate BEFORE landing. validate.yml's `on: push` does not fire for
+      # pushes made with GITHUB_TOKEN (GitHub suppresses recursive workflow
+      # runs), so this in-workflow check is what actually guards main.
+      - name: Validate providers.json
+        run: python3 scripts/validate_providers.py
 
       - name: Check for changes
         id: diff
@@ -28,20 +38,37 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Create pull request
+      # Push straight to main instead of opening a PR: PRs created with
+      # GITHUB_TOKEN require first-contribution approval before their
+      # checks run, which left the old auto/sync-providers PR stuck in
+      # `action_required` for two months while the catalog silently went
+      # stale (jeffkit/recursive-providers#3). Data is validated above
+      # before it can land.
+      - name: Commit and push to main
         if: steps.diff.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v7
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: auto/sync-providers
-          commit-message: "chore(sync): update pricing from LiteLLM"
-          title: "chore(sync): update provider pricing from LiteLLM"
-          body: |
-            Auto-synced from [LiteLLM model_prices_and_context_window.json](https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json).
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add providers.json
+          git commit -m "chore(sync): update pricing from LiteLLM"
+          git push origin HEAD:main
 
-            Changes detected by `scripts/sync_providers.py`. This PR auto-merges via `enable-pull-request-automerge` so the catalog stays current without manual review.
-          labels: automated
-          # Auto-merge so daily price updates land on `main` without a
-          # human clicking merge (the previous setup opened a PR that was
-          # never merged, so `main`'s catalog silently went stale).
-          enable-pull-request-automerge: true
+      # No more silent drift: a failed or blocked sync leaves a visible
+      # issue on the repo (commented on if one is already open), and the
+      # scheduled validate.yml run independently flags a stale catalog.
+      - name: Open alert issue on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          title="sync: daily LiteLLM sync failed"
+          stamp="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          body="Daily sync failed at \`${stamp}\`.<br>Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          existing="$(gh issue list --state open --search "in:title ${title}" --json number --jq '.[0].number')"
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body "$body"
+          else
+            gh issue create --title "$title" --body "$body" --label automated \
+              || gh issue create --title "$title" --body "$body"
+          fi

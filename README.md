@@ -73,6 +73,22 @@ change needed. Non-text modalities (image/audio/video/OCR), fine-tunes, and
 date-stamped snapshot builds are filtered out to keep the list readable.
 Ollama is kept manually (free/local, no pricing).
 
+The daily workflow validates the synced file (`scripts/validate_providers.py`)
+and pushes straight to `main` — no PR, no manual merge step. A failed sync
+opens a tracking issue automatically, and a scheduled validation run flags a
+catalog whose `updated_at` goes stale.
+
+### Pricing conventions
+
+- Prices are **USD per million tokens**, mirrored from LiteLLM's upstream table.
+- Where a vendor bills separate peak/off-peak tiers (e.g. DeepSeek, whose
+  off-peak is half of peak), the catalog records the **peak tier** — the
+  conservative choice, so displayed costs never under-estimate. Do not
+  "fix" these numbers down to off-peak.
+- `pricing: null` means free/local only (currently Ollama). Every
+  API-key provider's `default_model` must carry pricing; the validator
+  enforces this.
+
 | ID | Name | Mainland | Sync |
 |---|---|---|---|
 | `anthropic` | Anthropic | ✗ | LiteLLM |
