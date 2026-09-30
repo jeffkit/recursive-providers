@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-28T06:26:48Z",
+  "updated_at": "2026-09-30T09:54:38Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -11,6 +11,15 @@
       "anthropic_api_base": null,
       "default_model": "claude-sonnet-4-6",
       "models": [
+        {
+          "name": "claude-sonnet-5-5",
+          "context_window": 1000000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 10.0,
+            "cache_hit_input_per_million": 0.2
+          }
+        },
         {
           "name": "claude-sonnet-5",
           "context_window": 1000000,
@@ -218,6 +227,15 @@
             "input_per_million": 4.0,
             "output_per_million": 20.0,
             "cache_hit_input_per_million": 0.4
+          }
+        },
+        {
+          "name": "gpt-6.1-sol",
+          "context_window": 922000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 10.0,
+            "cache_hit_input_per_million": 0.1
           }
         },
         {
@@ -1560,8 +1578,16 @@
       "provider_type": "openai",
       "api_base": "https://api.groq.com/openai/v1",
       "anthropic_api_base": null,
-      "default_model": "openai/gpt-oss-safeguard-20b",
+      "default_model": "qwen/qwen3.8-27b",
       "models": [
+        {
+          "name": "qwen/qwen3.8-27b",
+          "context_window": 131072,
+          "pricing": {
+            "input_per_million": 0.8,
+            "output_per_million": 4.0
+          }
+        },
         {
           "name": "openai/gpt-oss-safeguard-20b",
           "context_window": 131072,
@@ -1587,14 +1613,6 @@
             "input_per_million": 0.15,
             "output_per_million": 0.6,
             "cache_hit_input_per_million": 0.075
-          }
-        },
-        {
-          "name": "qwen/qwen3.8-27b",
-          "context_window": 131042,
-          "pricing": {
-            "input_per_million": 0.8,
-            "output_per_million": 4.0
           }
         },
         {
