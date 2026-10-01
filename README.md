@@ -118,4 +118,4 @@ Pricing changes fast. PRs to update model names, pricing, or add new providers a
 
 ## License
 
-CC0 — public domain. (Stated here only; no LICENSE file has been placed in this repository yet.)
+CC0 — public domain. (Full legal text in [LICENSE](./LICENSE), SPDX: CC0-1.0)
