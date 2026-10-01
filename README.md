@@ -4,7 +4,7 @@ LLM provider preset catalog for [Recursive](https://github.com/jeffkit/Recursive
 
 ## What this is
 
-`providers.json` is the single source of truth for provider configuration used by Recursive. It is fetched automatically by the agent at startup (when the local cache is older than 7 days) and can be updated manually:
+`providers.json` is the single source of truth for provider configuration used by Recursive. It is fetched automatically by the agent in the background (the local cache refreshes when older than 7 days; automatic refresh requires setting `RECURSIVE_PROVIDERS_AUTO_REFRESH=1`) and can be updated manually:
 
 ```bash
 recursive providers update
@@ -74,7 +74,8 @@ date-stamped snapshot builds are filtered out to keep the list readable.
 Ollama is kept manually (free/local, no pricing).
 
 The daily workflow validates the synced file (`scripts/validate_providers.py`)
-and pushes straight to `main` — no PR, no manual merge step. A failed sync
+and pushes straight to `main` — no PR, no manual merge step. The legacy
+`auto/sync-providers` PR mechanism is deprecated. A failed sync
 opens a tracking issue automatically, and a scheduled validation run flags a
 catalog whose `updated_at` goes stale.
 
@@ -117,4 +118,4 @@ Pricing changes fast. PRs to update model names, pricing, or add new providers a
 
 ## License
 
-CC0 — public domain.
+CC0 — public domain. (Stated here only; no LICENSE file has been placed in this repository yet.)
