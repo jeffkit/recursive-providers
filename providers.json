@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-09T14:59:35Z",
+  "updated_at": "2026-10-10T14:15:26Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -31,15 +31,6 @@
         },
         {
           "name": "claude-sonnet-4-6",
-          "context_window": 1000000,
-          "pricing": {
-            "input_per_million": 3.0,
-            "output_per_million": 15.0,
-            "cache_hit_input_per_million": 0.3
-          }
-        },
-        {
-          "name": "claude-sonnet-4-5",
           "context_window": 1000000,
           "pricing": {
             "input_per_million": 3.0,
@@ -135,6 +126,15 @@
             "input_per_million": 10.0,
             "output_per_million": 50.0,
             "cache_hit_input_per_million": 1.0
+          }
+        },
+        {
+          "name": "claude-sonnet-4-5",
+          "context_window": 200000,
+          "pricing": {
+            "input_per_million": 3.0,
+            "output_per_million": 15.0,
+            "cache_hit_input_per_million": 0.3
           }
         },
         {
@@ -688,6 +688,15 @@
         },
         {
           "name": "gpt-rosalind-research",
+          "context_window": 0,
+          "pricing": {
+            "input_per_million": 5.0,
+            "output_per_million": 25.0,
+            "cache_hit_input_per_million": 0.5
+          }
+        },
+        {
+          "name": "gpt-rosalind-discovery",
           "context_window": 0,
           "pricing": {
             "input_per_million": 5.0,
