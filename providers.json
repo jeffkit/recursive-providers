@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-13T15:36:24Z",
+  "updated_at": "2026-10-14T13:19:40Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -1420,6 +1420,15 @@
             "input_per_million": 0.75,
             "output_per_million": 3.75,
             "cache_hit_input_per_million": 0.075
+          }
+        },
+        {
+          "name": "gemini-4-argon",
+          "context_window": 1048576,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 10.0,
+            "cache_hit_input_per_million": 0.1
           }
         },
         {
