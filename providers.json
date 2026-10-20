@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-19T15:17:45Z",
+  "updated_at": "2026-10-20T13:21:34Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -811,6 +811,11 @@
             "output_per_million": 2.19,
             "cache_hit_input_per_million": 0.14
           }
+        },
+        {
+          "name": "search",
+          "context_window": 0,
+          "pricing": null
         }
       ],
       "mainland_accessible": true,
