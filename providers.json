@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-24T12:27:19Z",
+  "updated_at": "2026-10-25T12:58:17Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -1764,6 +1764,15 @@
             "input_per_million": 1.4,
             "output_per_million": 4.4,
             "cache_hit_input_per_million": 0.14
+          }
+        },
+        {
+          "name": "zai-glm-5-3-flash",
+          "context_window": 1048576,
+          "pricing": {
+            "input_per_million": 0.15,
+            "output_per_million": 0.5,
+            "cache_hit_input_per_million": 0.03
           }
         },
         {
