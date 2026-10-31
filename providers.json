@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-30T14:50:56Z",
+  "updated_at": "2026-10-31T14:18:42Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -263,6 +263,15 @@
             "input_per_million": 2.0,
             "output_per_million": 10.0,
             "cache_hit_input_per_million": 0.2
+          }
+        },
+        {
+          "name": "gpt-6-rosalind",
+          "context_window": 922000,
+          "pricing": {
+            "input_per_million": 15.0,
+            "output_per_million": 75.0,
+            "cache_hit_input_per_million": 1.5
           }
         },
         {
