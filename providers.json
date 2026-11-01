@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-31T14:18:42Z",
+  "updated_at": "2026-11-01T14:58:55Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -281,6 +281,15 @@
             "input_per_million": 0.1,
             "output_per_million": 0.5,
             "cache_hit_input_per_million": 0.01
+          }
+        },
+        {
+          "name": "gpt-6-astra-law",
+          "context_window": 922000,
+          "pricing": {
+            "input_per_million": 10.0,
+            "output_per_million": 50.0,
+            "cache_hit_input_per_million": 1.0
           }
         },
         {
