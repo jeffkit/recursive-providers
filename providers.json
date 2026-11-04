@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-03T15:50:51Z",
+  "updated_at": "2026-11-04T15:58:07Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -1753,14 +1753,6 @@
             "input_per_million": 0.15,
             "output_per_million": 0.6,
             "cache_hit_input_per_million": 0.075
-          }
-        },
-        {
-          "name": "llama-guard-3-8b",
-          "context_window": 8192,
-          "pricing": {
-            "input_per_million": 0.2,
-            "output_per_million": 0.2
           }
         },
         {
