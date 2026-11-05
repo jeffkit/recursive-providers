@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-04T15:58:07Z",
+  "updated_at": "2026-11-05T16:09:54Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -347,24 +347,6 @@
           }
         },
         {
-          "name": "gpt-daybreak-red-latest",
-          "context_window": 400000,
-          "pricing": {
-            "input_per_million": 12.5,
-            "output_per_million": 75.0,
-            "cache_hit_input_per_million": 1.25
-          }
-        },
-        {
-          "name": "gpt-5.6-cyber",
-          "context_window": 400000,
-          "pricing": {
-            "input_per_million": 12.5,
-            "output_per_million": 75.0,
-            "cache_hit_input_per_million": 1.25
-          }
-        },
-        {
           "name": "gpt-5.1-codex-mini",
           "context_window": 400000,
           "pricing": {
@@ -400,8 +382,17 @@
           }
         },
         {
-          "name": "daybreak-red-latest",
+          "name": "chat-latest",
           "context_window": 400000,
+          "pricing": {
+            "input_per_million": 5.0,
+            "output_per_million": 30.0,
+            "cache_hit_input_per_million": 0.5
+          }
+        },
+        {
+          "name": "gpt-daybreak-red-latest",
+          "context_window": 272000,
           "pricing": {
             "input_per_million": 12.5,
             "output_per_million": 75.0,
@@ -409,12 +400,12 @@
           }
         },
         {
-          "name": "chat-latest",
-          "context_window": 400000,
+          "name": "gpt-5.6-cyber",
+          "context_window": 272000,
           "pricing": {
-            "input_per_million": 5.0,
-            "output_per_million": 30.0,
-            "cache_hit_input_per_million": 0.5
+            "input_per_million": 12.5,
+            "output_per_million": 75.0,
+            "cache_hit_input_per_million": 1.25
           }
         },
         {
@@ -522,6 +513,15 @@
             "input_per_million": 1.25,
             "output_per_million": 10.0,
             "cache_hit_input_per_million": 0.125
+          }
+        },
+        {
+          "name": "daybreak-red-latest",
+          "context_window": 272000,
+          "pricing": {
+            "input_per_million": 12.5,
+            "output_per_million": 75.0,
+            "cache_hit_input_per_million": 1.25
           }
         },
         {
