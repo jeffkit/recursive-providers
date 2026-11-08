@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-07T14:41:21Z",
+  "updated_at": "2026-11-08T14:47:07Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -1122,6 +1122,15 @@
       "anthropic_api_base": null,
       "default_model": "kimi-k2.6",
       "models": [
+        {
+          "name": "kimi-k3.1-pro-highspeed",
+          "context_window": 1048576,
+          "pricing": {
+            "input_per_million": 4.0,
+            "output_per_million": 20.0,
+            "cache_hit_input_per_million": 0.2
+          }
+        },
         {
           "name": "kimi-k3.1-pro",
           "context_window": 1048576,
