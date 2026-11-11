@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-10T16:06:54Z",
+  "updated_at": "2026-11-11T15:52:44Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -1562,6 +1562,15 @@
             "input_per_million": 0.75,
             "output_per_million": 3.75,
             "cache_hit_input_per_million": 0.075
+          }
+        },
+        {
+          "name": "gemini-4-carbon",
+          "context_window": 1048576,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 10.0,
+            "cache_hit_input_per_million": 0.1
           }
         },
         {
