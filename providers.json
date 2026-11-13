@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T16:35:51Z",
+  "updated_at": "2026-11-13T15:55:40Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -1561,6 +1561,15 @@
           "pricing": {
             "input_per_million": 0.75,
             "output_per_million": 3.75,
+            "cache_hit_input_per_million": 0.075
+          }
+        },
+        {
+          "name": "gemini-4-hydrogen",
+          "context_window": 1048576,
+          "pricing": {
+            "input_per_million": 1.5,
+            "output_per_million": 7.5,
             "cache_hit_input_per_million": 0.075
           }
         },
