@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-16T17:58:24Z",
+  "updated_at": "2026-11-17T17:23:49Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -1319,6 +1319,14 @@
           "name": "qwen-flash",
           "context_window": 997952,
           "pricing": null
+        },
+        {
+          "name": "qwen4-max",
+          "context_window": 991808,
+          "pricing": {
+            "input_per_million": 1.5,
+            "output_per_million": 4.5
+          }
         },
         {
           "name": "qwen3.8-omni-flash",
