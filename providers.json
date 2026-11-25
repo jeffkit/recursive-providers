@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-24T19:21:10Z",
+  "updated_at": "2026-11-25T18:26:22Z",
   "source_url": "https://raw.githubusercontent.com/jeffkit/recursive-providers/main/providers.json",
   "providers": [
     {
@@ -472,15 +472,6 @@
           }
         },
         {
-          "name": "chat-latest",
-          "context_window": 400000,
-          "pricing": {
-            "input_per_million": 5.0,
-            "output_per_million": 30.0,
-            "cache_hit_input_per_million": 0.5
-          }
-        },
-        {
           "name": "gpt-daybreak-red-latest",
           "context_window": 272000,
           "pricing": {
@@ -612,6 +603,15 @@
             "input_per_million": 12.5,
             "output_per_million": 75.0,
             "cache_hit_input_per_million": 1.25
+          }
+        },
+        {
+          "name": "chat-latest",
+          "context_window": 272000,
+          "pricing": {
+            "input_per_million": 5.0,
+            "output_per_million": 30.0,
+            "cache_hit_input_per_million": 0.5
           }
         },
         {
@@ -2754,7 +2754,25 @@
           }
         },
         {
+          "name": "grok-4.7-latest",
+          "context_window": 500000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 6.0,
+            "cache_hit_input_per_million": 0.5
+          }
+        },
+        {
           "name": "grok-4.7",
+          "context_window": 500000,
+          "pricing": {
+            "input_per_million": 2.0,
+            "output_per_million": 6.0,
+            "cache_hit_input_per_million": 0.5
+          }
+        },
+        {
+          "name": "grok-4.6-latest",
           "context_window": 500000,
           "pricing": {
             "input_per_million": 2.0,
